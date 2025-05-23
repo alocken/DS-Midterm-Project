@@ -7,14 +7,19 @@ The goal of this project is to predict house sold prices using property data inc
 ## Process
 ### Data Loading & Cleaning
 -  Loaded the dataset containing property listings including nested JSON fields
+-  Determined sold price as the target variable
+-  Dropped irrelevant columns
+-  Handled missing values by replacing NA/None cells with alternatives
 -  Extracted relevant features
 -  Cleaned the tags column and ensured consistent formatting for future use
 ### Exploratory Data Analysis
 - Visualized distributions of numeric features
-- Plotted scatterpolots of key features vs. sold price to see if there was a relationship
+- Plotted scatterplots of key features vs. sold price to see if there was a relationship
+- Concatenated relevant OHE tags with target variable
 - Created heat maps to identify feature correlations
 - Investigated the effect of location and tags on sold house prices
-### Step 3
+### Scaling and Finishing
+- Scaled data and save to preprocessing (.csv)
 
 ## Results
 (fill in how your model performed)
