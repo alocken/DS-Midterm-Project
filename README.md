@@ -19,7 +19,12 @@ The goal of this project is to predict house sold prices using property data inc
 - Created heat maps to identify feature correlations
 - Investigated the effect of location and tags on sold house prices
 ### Scaling and Finishing
-- Scaled data and save to preprocessing (.csv)
+- Scaled and save data to preprocessing (.csv)
+
+### Model Selection and Hyperparameter Tuning (Cross-validation)
+- Tested three supervised learning models on preprocessed data
+- Identified best performing models
+- Completed hyperparameter tuning (cross-validation)
 
 ## Results
 ### Linear Regressin Model
@@ -30,6 +35,9 @@ The Random Forest Regressor results have a mean squared error of 0.18 and a R² 
 
 ### XGBoost Regressor
 The XGBoost Regressor results have a MSE of 0.04 and a R² Score value of 0.98. The squared differences between predicted and actual values are very small and 98% of the variance in house sale prices is explained by this model. This is a strong performing model. The top feature of price_reduced_amount is showing only weak to moderate correlation with sold_price which suggests that XGBoost is likely capturing non-linear interactions or combinations of features. XGBoost is outperforming Random Forest because it sequentially corrects previous errors and is effective at capturing complex patterns in structured data.
+
+### Final Performance: Best Models Hyperparameter Tuning (cross-validation) Outputs
+Best performing models completed Hyperparameter tuning on were Random Forest and XGBoost. Random Forest output a lower RMSE (0.2337 vs. 0.2702), indicating better accuracy, and an R² Score that explained more variance (94.17%) than XGBoost (92.20%). Random Forest performed better in both accuracy (lower RMSE) and explanatory power (higher R²). XGBoost was also strong but Random Forest provided precise and consistent dataset predictions.
 
 ## Challenges 
 - Dealing with fragmented and nested JSON fields
