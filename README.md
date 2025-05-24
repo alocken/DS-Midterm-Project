@@ -34,8 +34,8 @@ The XGBoost Regressor results have a MSE of 0.04 and a R² Score value of 0.98. 
 ## Challenges 
 - Dealing with fragmented and nested JSON fields
 - Managing a large number of unique tags and cities 
-- Identifying and resolving data leakage variables in both columns and nested features
-- 
+- Converting stringified dict, then dict to individual columns to remove and address problematic columns/features
+- Identifying and resolving data leakage variables in columns and nested features 
 
 ## Future Goals
 (what would you do if you had more time?)
