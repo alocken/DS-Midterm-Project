@@ -43,14 +43,14 @@ Best performing models completed Hyperparameter tuning on were Random Forest and
 
 Built a machine learning pipeline to predict house prices using JSON-based real estate data.
 
-- The pipeline:
-	•	Loads and preprocesses raw data from multiple JSON files
-	•	Extracts features and the target variable (sold_price)
-	•	Handles missing values, scaling, and custom encodings:
-	•	Categorical variables (city, state) are encoded using a custom TargetEncoder
-	•	List-type features (tags) are encoded using a custom TagEncoder
-	•	Trains a RandomForestRegressor model inside a fully scikit-learn compatible Pipeline
-	•	Saves the trained pipeline as a .joblib file in the models/ directory
+The pipeline:
+- Loads and preprocesses raw data from multiple JSON files
+- Extracts features and the target variable (sold_price)
+- Handles missing values, scaling, and custom encodings:
+- Categorical variables (city, state) are encoded using a custom TargetEncoder
+- List-type features (tags) are encoded using a custom TagEncoder
+- Trains a RandomForestRegressor model inside a fully scikit-learn compatible Pipeline
+- Saves the trained pipeline as a .joblib file in the models/ directory
 
 This ensures a reusable model that prevents data leakage and supports use on new data.
 
