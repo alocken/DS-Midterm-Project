@@ -39,6 +39,21 @@ XGBoost returned a MSE of 0.08, RMSE of 0.29, and an R² Score of 0.91, also ind
 ### Final Performance: Best Models Hyperparameter Tuning Outputs
 Best performing models completed Hyperparameter tuning on were Random Forest and XGBoost. Random Forest output a lower RMSE (0.2337 vs. 0.2702), indicating better accuracy, and an R² Score that explained more variance (94.17%) than XGBoost (92.20%). Random Forest performed better in both accuracy (lower RMSE) and explanatory power (higher R²). XGBoost was also strong but Random Forest provided precise and consistent dataset predictions.
 
+### Pipeline
+
+Built a machine learning pipeline to predict house prices using JSON-based real estate data.
+
+The pipeline:
+- Loads and preprocesses raw data from multiple JSON files
+- Extracts features and the target variable (sold_price)
+- Handles missing values, scaling, and custom encodings:
+- Categorical variables (city, state) are encoded using a custom TargetEncoder
+- List-type features (tags) are encoded using a custom TagEncoder
+- Trains a RandomForestRegressor model inside a fully scikit-learn compatible Pipeline
+- Saves the trained pipeline as a .joblib file in the models/ directory
+
+This ensures a reusable model that prevents data leakage and supports use on new data.
+
 ## Challenges 
 - Dealing with fragmented and nested JSON fields
 - Managing a large number of unique tags and cities 
@@ -47,7 +62,6 @@ Best performing models completed Hyperparameter tuning on were Random Forest and
 
 ## Future Goals
 If more time were available, future steps could include:
-- Building a full scikit-learn pipeline for preprocessing and inference
 - Incorporating geospatial features (e.g., proximity to amenities)
 - Using feature selection techniques to reduce noise
 - Deploying the final model via Flask or FastAPI for predictions on new data
